@@ -1,0 +1,31 @@
+﻿<Window x:Class="AnkietaWPF.PodsumowanieWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Podsumowanie ankiety"
+        Height="600"
+        Width="500"
+        WindowStartupLocation="CenterScreen">
+    <DockPanel Margin="15">
+        <StackPanel DockPanel.Dock="Bottom">
+            <Button Content="Zapisz podsumowanie do pliku"
+                    Height="35"
+                    Margin="0,10,0,5"
+                    Click="Zapisz_Click"/>
+
+            <Button Content="Zakończ"
+                    Height="35"
+                    Click="Zakoncz_Click"/>
+        </StackPanel>
+
+        <ScrollViewer VerticalScrollBarVisibility="Auto">
+            <TextBox x:Name="StatystykiTextBox"
+                     IsReadOnly="True"
+                     TextWrapping="Wrap"
+                     AcceptsReturn="True"
+                     VerticalScrollBarVisibility="Auto"
+                     FontFamily="Consolas"
+                     FontSize="13"
+                     BorderThickness="0"/>
+        </ScrollViewer>
+    </DockPanel>
+</Window>
